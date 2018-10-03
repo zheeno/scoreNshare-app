@@ -1,0 +1,16 @@
+.music-info-btn.container-fluid {
+  border-top: 1px solid #424242;
+  border-bottom: 1px solid #424242;
+  padding: 10px 0px !important;
+}
+
+.comp-pro-pic-sm {
+  padding: 11px 15px !important;
+  border-radius: 100px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.review-list {
+  padding: 5px 20px;
+  border-bottom: 1px solid #424242;
+}

@@ -1,0 +1,19 @@
+.music-list {
+  margin: 0px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #333 !important;
+}
+.music-list h4 {
+  font-size: 18px;
+  margin-top: 5px !important;
+}
+.music-list p {
+  top: -10px;
+  font-size: 13px;
+  color: #616161 !important;
+  position: relative;
+  margin-bottom: 10px !important;
+}
+.music-list .card-body {
+  padding: 5px 20px !important;
+}
