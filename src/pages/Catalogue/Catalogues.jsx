@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { GetData } from "../services/GetData";
+
 import Loader from "../../components/Misc/Loader";
 import Alert from "../../components/Misc/Alert";
 import View from "../Root/View";
@@ -7,12 +9,11 @@ import CatalogueCards from "./CatalogueCards";
 class Catalogues extends Component {
   componentDidMount() {
     this.setState({ ajaxCallState: "fetching" });
-    fetch("http://sheethub.cluster/music/catalogue?resType=json")
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ catalogues: res });
-        this.setState({ ajaxCallState: "idle" });
-      });
+    GetData("music/catalogue?resType=json").then(result => {
+      let response = result;
+      this.setState({ catalogues: response });
+      this.setState({ ajaxCallState: "idle" });
+    });
   }
 
   state = {
