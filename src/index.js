@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import registerServiceWorker from "./registerServiceWorker";
 // ****************************************************************
 // ****************************************************************
-// components
+// components on the app
 import App from "./App";
 import MusicContent from "./pages/MusicContent/MusicContent";
 import Catalogues from "./pages/Catalogue/Catalogues";
