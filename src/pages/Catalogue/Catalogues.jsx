@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GetData } from "../services/GetData";
+import { GetData } from "../../services/GetData";
 
 import Loader from "../../components/Misc/Loader";
 import Alert from "../../components/Misc/Alert";
