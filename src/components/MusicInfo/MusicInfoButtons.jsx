@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./MusicInfo.css";
 
-const MusicInfoButtons = ({ downloads, category, likes }) => {
+const MusicInfoButtons = ({ downloads, reviews, likes }) => {
   return (
     <React.Fragment>
       <div className="music-info-btn container-fluid">
@@ -22,14 +21,13 @@ const MusicInfoButtons = ({ downloads, category, likes }) => {
             </span>
           </div>
           <div className="col-4 center-align">
-            <Link
-              to={"/music/catalogue/" + category}
+            <span
               className="grey-text m-r-5"
             >
-              <span className="fa fa-folder" />
+              <span className="fa fa-comment" />
               &nbsp;&middot;&nbsp;
-              {category}
-            </Link>
+              {reviews}
+            </span>
           </div>
         </div>
       </div>

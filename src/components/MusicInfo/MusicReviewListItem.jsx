@@ -6,12 +6,12 @@ const MusicReviewListItem = ({ id, user_id, user_name, review }) => {
     <React.Fragment>
       <div className="row review-list" id={"rev_" + id}>
         <div className="col-12">
-          <UserProfilePic
+          {/* <UserProfilePic
             key={user_id}
             type="inline"
             user_id={user_id}
             user_name={user_name}
-          />
+          /> */}
         </div>
         <div className="col-12">
           <p className="grey-text justify">{review}</p>

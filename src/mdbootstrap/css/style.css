@@ -2,6 +2,10 @@
 .mx-h-100 {
   max-height: 100px;
 }
+.lead-text{
+  font-weight: 300 !important;
+    font-size: large !important;
+}
 .thin {
   font-weight: 300 !important;
 }
