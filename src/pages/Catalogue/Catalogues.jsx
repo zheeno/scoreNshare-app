@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GetData } from "../../services/GetData";
+import { GetData } from "../../services/ApiCaller";
 
 import Loader from "../../components/Misc/Loader";
 import Alert from "../../components/Misc/Alert";
@@ -9,11 +9,18 @@ import CatalogueCards from "./CatalogueCards";
 class Catalogues extends Component {
   componentDidMount() {
     this.setState({ ajaxCallState: "fetching" });
-    GetData("music/catalogue?resType=json").then(result => {
-      let response = result;
-      this.setState({ catalogues: response });
-      this.setState({ ajaxCallState: "idle" });
-    });
+    GetData("music/catalogue?resType=json")
+      .then(result => {
+        let response = result;
+        this.setState({ catalogues: response });
+        this.setState({ ajaxCallState: "idle" });
+      })
+      .catch(error => {
+        alert(
+          `Error encountered while fetching content. Please check your
+                internet connection and try again.` + error
+        );
+      });
   }
 
   state = {

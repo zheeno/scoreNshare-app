@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { GetData } from "../../services/ApiCaller";
+
 import View from "../Root/View";
 import Loader from "../../components/Misc/Loader";
 import Alert from "../../components/Misc/Alert";
@@ -8,15 +10,12 @@ class CatalogueContent extends Component {
   componentDidMount() {
     this.setState({ ajaxCallState: "fetching" });
     const { category } = this.props.match.params;
-    fetch(
-      "http://sheethub.cluster/music/catalogue/" + category + "?resType=json"
-    )
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ musics: res.musics });
-        this.setState({ category: res.category });
-        this.setState({ ajaxCallState: "idle" });
-      });
+    GetData("music/catalogue/" + category + "?resType=json").then(result => {
+      let response = result;
+      this.setState({ musics: response.musics });
+      this.setState({ category: response.category });
+      this.setState({ ajaxCallState: "idle" });
+    });
   }
 
   state = {
@@ -90,7 +89,7 @@ class CatalogueContent extends Component {
                 </div>
               </div>
               <div className="col-11 mx-auto">
-                <p class="grey-text">{this.state.category.description}</p>
+                <p className="grey-text">{this.state.category.description}</p>
               </div>
             </div>
           </div>
