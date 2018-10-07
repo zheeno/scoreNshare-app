@@ -25,9 +25,9 @@ class MusicList extends Component {
                   {this.props.contents.details.downloads}
                 </span>
                 <span className="grey-text m-r-5">
-                  <span className="fa fa-folder" />
+                  <span className="fa fa-comment" />
                   &nbsp;&middot;&nbsp;
-                  {this.props.contents.details.category}
+                  {this.props.contents.reviews.length}
                 </span>
               </div>
             </div>

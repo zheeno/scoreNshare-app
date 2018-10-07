@@ -13,12 +13,12 @@ export const Alert = props => {
 
 export const Loader = props => {
   return (
-    <div className="row pad-top-100 center-align">
-      <div className="col-12">
-        <span className="fa fa-spinner fa-spin fa-2x grey-text" />
-        <div className="pad-top-25">
+    <div className="loader-icon-container row pad-top-100 center-align">
+      <div className="col-12 pad-top-100">
+        <div className="loader-icon animated pulse infinite" />
+        {/* <div className="pad-top-25">
           <h5 className="grey-text">{props.text}</h5>
-        </div>
+        </div> */}
       </div>
     </div>
   );
