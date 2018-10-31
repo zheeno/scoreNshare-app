@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 import "../../components/MusicCard/Card.css";
+
 class CatalogueCard extends Component {
   state = {};
   render() {
